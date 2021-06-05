@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+//hay que instalar react router en la consola
+import {BrowserRouter as Router} from 'react-router-dom';
+import {ProductProvider} from './context';
+//import * as serviceworker from "./serviceWorker";
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+ReactDOM.render( 
+ 
+  <ProductProvider>
+    <Router>
+      <App />
+    </Router>,
+  </ProductProvider>,
   document.getElementById('root')
 );
 
